@@ -1,0 +1,15 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: Kiran-Node-RED-Demo
+  host: Kiran-Node-RED-Demo
+  disk_quota: 1024M
+  services:
+  - conversation-service
+  - Kiran-Node-RED-Demo-cloudantNoSQLDB
+  - Visual Recognition-qg
+  - Tradeoff Analytics-yl
+  - Language Translator-d8
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
